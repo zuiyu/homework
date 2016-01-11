@@ -1,0 +1,170 @@
+/*设置编码方式*/
+@charset "UTF-8";
+
+/*初始化margin和padding*/
+* {
+    margin: 0;
+    padding: 0;
+    behavior: url(../ie-css3.htc);
+}
+
+/*引入ie-css3 适配ie*/
+html {
+    position: relative;
+    overflow-y: auto;
+    height: 100%;
+    behavior: url(../ie-css3.htc);
+}
+
+body {
+    font-family: arial;
+    font-size: 13px;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+
+/*设置nav点击时候的属性*/
+nav {
+    position: absolute;
+    z-index: 10000;
+    top: 0;
+    right: 5px;
+}
+
+nav ul {
+    line-height: 24px;
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    margin: 0 8px;
+}
+
+nav ul li a:link,
+nav ul li a:visited {
+    color: #333;
+}
+
+nav ul li a:hover,
+nav ul li a:active {
+    color: #00c;
+}
+
+nav ul li:last-of-type a {
+    padding: 4px;
+    text-decoration: none;
+    color: #fff;
+    background: #38f;
+}
+
+#baba {
+    position: relative;
+    display: block;
+    min-width: 810px;
+    height: 100%;
+    min-height: 600px;
+}
+
+#ba {
+    position: relative;
+    top: 38.2%;
+}
+
+#container {
+    position: relative;
+    top: -191px;
+    height: 100%;
+}
+
+#container img {
+    position: relative;
+    display: block;
+    width: 270px;
+    height: 129px;
+    margin: 20px auto;
+}
+
+/*搜索*/
+.search {
+    width: 650px;
+    margin: 0 auto;
+    margin-top: 22px;
+    white-space: 0;
+    letter-spacing: -4px;
+}
+
+.search input {
+    line-height: 30px;
+    width: 540px;
+    height: 34px;
+    vertical-align: top;
+    text-indent: 4px;
+    letter-spacing: 0;
+    border: 1px solid #b6b6b6;
+    border-right: none;
+    outline: 0;
+}
+
+.search input:focus {
+    border: 1px solid #317ef3;
+}
+
+.search button {
+    width: 100px;
+    height: 36px;
+    cursor: pointer;
+    vertical-align: top;
+    letter-spacing: 0;
+    color: #fff;
+    border: none;
+    border-bottom: 1px solid #2d78f4;
+    background: #3385ff;
+}
+
+/*结果展示框*/
+
+.result {
+    width: 650px;
+    margin: 0 auto;
+    margin-top: 30px;
+    white-space: 0;
+    letter-spacing: -4px;
+}
+
+.result textarea {
+    line-height: 30px;
+    width: 640px;
+    height: 180px;
+    vertical-align: top;
+    text-indent: 4px;
+    letter-spacing: 0;
+    border: 1px solid #b6b6b6;
+    outline: 0;
+}
+
+/*footer*/
+footer {
+    line-height: 20px;
+    position: absolute;
+    bottom: 44px;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+}
+
+footer p:first-of-type a {
+    color: #00c;
+}
+
+footer p:first-of-type a:active {
+    color: #f60;
+}
+
+footer p:last-of-type * {
+    color: #666;
+}

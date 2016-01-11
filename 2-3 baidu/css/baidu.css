@@ -1,0 +1,144 @@
+/*设置utf-8编码*/
+
+@charset "UTF-8";
+
+/*全局设置：margin和padding为0*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/*对body设置样式*/
+
+body {
+    height: 100%;
+    font: 13px arial;
+}
+
+.all {
+    min-height: 600px;
+    min-width: 800px;
+    position: relative;
+    height: 100%;
+}
+
+
+/*对导航nav设置*/
+
+nav {
+    position: absolute;
+    top: 19px;
+    right: 4px;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 0 8px;
+}
+
+nav ul li a {
+    color: #333;
+}
+
+nav a:link,
+a:visited {
+    color: black;
+}
+
+nav a:hover,
+a:active {
+    color: #317EF3;
+}
+
+.more {
+    background: #38f;
+    color: #fff;
+    padding: 5px;
+    text-decoration: none;
+}
+
+
+/*对search设置*/
+
+.search {
+    position: absolute;
+    width: 642px;
+    left: 50%;
+    margin-left: -321px;
+    top: 50%;
+    margin-top: -191px;
+}
+
+.search img {
+    width: 270px;
+    height: 129px;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 40px;
+}
+
+.search input {
+    width: 540px;
+    height: 35px;
+    /*line-height: 30px;*/
+    border: 1px #317EF3 solid;
+    outline: none;
+    padding: 0px;
+    margin-top: -10px;
+    float: left;
+    text-indent: 5px;
+}
+
+.search button {
+    width: 100px;
+    height: 37px;
+    border: none;
+    float: left;
+    margin-top: -10px;
+    background: #317EF3;
+    color: #fff;
+    font: 14px arial;
+    cursor: pointer;
+}
+
+
+/*对footer设置*/
+
+footer {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: -90px;
+    line-height: 32px;
+}
+
+.footer1 a {
+    padding: 0 5px;
+}
+
+.footer2 {
+    color: #666
+}
+
+
+/*link 和 visited颜色一样 使用 a直接可以进行设置*/
+
+.footer1 a {
+    color: #00c;
+}
+
+.footer1 a:active,
+{
+    color: #FFAA00
+}
+
+.footer2 a {
+    color: #666;
+}
+
+.footer2 a:active,
+{
+    color: #666
+}

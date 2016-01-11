@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="极客学院|大前端培训|前端学习">
+    <meta name="description" content="极客学院第四期大前端培训第二周作业">
+    <title>flex</title>
+    <!-- 引入内部样式表-->
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /*在新版的chrome浏览器中已经支持通用flex属性，不需要在为chrome浏览器增加-webkit前缀,并且主流浏览器基本都支持此属性，所以只写了flex*/
+        /*水平flex*/
+
+        .flex-hor {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .flex-hor div:nth-of-type(1) {
+            background: lightblue;
+            height: 200px;
+            flex: 1 300px;
+            width: 100px;
+            height: 200px;
+        }
+
+        .flex-hor div:nth-of-type(2) {
+            background: lightgreen;
+            flex: 1 500px;
+            width: 100px;
+        }
+
+        .flex-hor div:nth-of-type(3) {
+            background: lightyellow;
+            flex: 1 400px;
+            width: 100px;
+        }
+
+        /*垂直flex*/
+
+        .flex-ver {
+            margin-top: 100px;
+            display: flex;
+            flex-direction: column;
+            height: 200px;
+            width: 800px;
+        }
+
+        .flex-ver div:nth-of-type(1) {
+            flex: 1 1 100px;
+            background-color: brown;
+        }
+
+        .flex-ver div:nth-of-type(2) {
+            flex: 1 2 100px;
+            background-color: pink;
+        }
+
+        .flex-ver div:nth-of-type(3) {
+            flex: 1 2 200px;
+            background-color: purple;
+        }
+    </style>
+</head>
+
+<body>
+<!--水平flex -->
+<div class="flex-hor">
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+<!--垂直flex -->
+<div class="flex-ver">
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+</body>
+
+</html>

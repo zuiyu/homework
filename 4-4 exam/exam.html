@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <!-- 使用IE标准模式渲染 , 未安装chrome弹框提示安装-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <!-- 使用双核浏览器，强制使用webkit渲染 -->
+    <meta name="renderer" content="webkit"/>
+    <!-- 设置seo关键词-->
+    <meta name="keywords" content="极客学院|大前端培训|前端学习">
+    <!-- 设置seo描述-->
+    <meta name="description" content="极客学院第四期大前端培训第四周作业">
+    <title>初级前端测试题</title>
+    <!-- 引入外部样式表-->
+    <link type="text/css" href="exam.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>写给自己-不忘初心</h1>
+    </header>
+    <!-- 文章开始-->
+    <article>
+        <!-- 第一个问题：你为什么做前端-->
+        <section>
+            <h3><strong>1.谈谈你为什么做前端</strong></h3>
+
+            <p>先说一下我的专业，因为我本科学的是通信工程，是搞硬件的，专业培养倾向于硬件，学了很多关于《TCP/IP》《
+                计算机组成原理》《模拟电子电路》《数字电路》还有《信号与系统》这种偏向机器的知识，对网络比较熟悉。本身我挺喜欢折腾的，上网时间久了就开始对浏览器解析html开始感兴趣了,不过也一直没有时间去系统的学习，就是粗略的了解一下大概。</p>
+
+            <p>自从报了极客学院的大前端培训以后，这一个月逛了github，刷过知乎，围观过v2ex,关注了好多前端大牛的微博，加了豪情的qq群，follow了uc的张云龙。</p>
+
+            <p>QQ群里和论坛里讨论的都是如何用html5新增的元素重构页面，开始逐渐的意识到语义化对SEO的重要性，逐渐审视自己的HTML标签是否符合语义，对形如“section” “nav”
+                “articel”等语义化元素有了更深刻的理解，越走越远，慢慢意识到web
+                app的兴起使得前端开发人员要做的工作不再局限于切图和写页面，更多的逻辑可以在客户端浏览器里运行，javascript架构得到了大部分开发者的重视。前端代码分层，每层各司其职变得尤为重要。MVC框架如backbone.js，MVVM框架如angular得到了越来越多开发者的青睐。</p>
+
+            <p>所以，从我短暂的前端开发之路的过程中来看，前端开发的发展越来越贴近「传统」的后端程序员，也许在未来的某个时间点上，前端和后端的隔阂将彻底的被打破，浏览器上的「工匠」将统称为web开发者。</p>
+
+            <p>但是，从我自己的角度上来看，我不希望自己的发展是随波逐流的。我接触前端开发的初衷，是前端开发可以将设计师脑海中的蓝图转化为现实。所以我更加希望自己的前端开发之路能越来越深入的提高用户体验。</p>
+
+            <p>
+                这个方向更加的偏向设计师的工作——把展现给用户的界面精雕细琢，精确到每一个像素；更加注重文字的排版；与设计师的沟通要比跟后端程序员沟通的次数要多，跟设计师商讨每一个细节；页面元素各种状态以及页面在处于动态时，一些元素的效果。</p>
+
+            <p>
+                在前端响应式开发大行其道的今天，如何把多终端的前端页面处理好也是前端职业发展不可绕过的一关，不同设备下不同元素的位置、布局、显隐虽有迹可循，但仔细琢磨后，又觉得有大道理没有被发现。前端探索的道路一直如小马过河，每个开发人员都有过河的资格和可能。</p>
+
+            <p>也许从大众角度来说，前端程序员未来的路越来越宽。</p>
+
+            <p>而对我来说，前端的路会越来越长。</p>
+
+            <p>
+                虽然这只是一个作业，可能以后也没机会打开这个exam.html了。因为骨子里对互联网的喜欢，渴望自己做的产品，写的前端页面能给大家带来方便，哪怕一点点，我也就知足了。希望自己能不忘初心，一直走下去，这就是我做前端的理由。嗯，不忘初心。</p>
+        </section>
+        <!-- 第一个问题结束-->
+
+        <!-- 第二个问题：谈谈圣杯布局和双飞翼布局的区别-->
+        <section>
+            <h3><strong>2.讲讲圣杯布局和双飞翼布局的实现思路</strong></h3>
+
+            <p>[圣杯布局]</p>
+            <img src="images/layout.png" width="1024">
+
+            <p>实现目标：在这里，实现了左(200px) 右(220px) 宽度固定，中间自适应，container部分高度保持一致。</p>
+
+            <p>思路：</p>
+
+            <p>html代码中 middle部分首先要放在container的最前部分。然后是left,right</p>
+
+            <p>1.将三者都 float:left , 再加上一个position:relative (因为相对定位后面会用到）</p>
+
+            <p>2.middle部分 width:100%占满</p>
+
+            <p>3.此时middle占满了，所以要把left拉到最左边，使用margin-left:-100%</p>
+
+            <p>4.这时left拉回来了，但会覆盖middle内容的左端，要把middle内容拉出来，所以在外围container加上 padding:0 220px 0 200px</p>
+
+            <p>5.middle内容拉回来了，但left也跟着过来了，所以要还原，就对left使用相对定位 left:-200px 同理，right也要相对定位还原 right:-220px</p>
+
+            <p>6.到这里大概就自适应好了。如果想container高度保持一致可以给left middle right都加上min-height:130px</p>
+
+            <p>[双飞翼布局]</p>
+            <img src="images/two-wings.png" width="1024">
+
+            <p>实现目标：在这里，实现了左(200px) 右(220px) 宽度固定，中间自适应，container部分高度保持一致。</p>
+
+            <p>思路：</p>
+
+            <p>双飞翼布局是玉伯大大提出来的，始于淘宝UED</p>
+
+            <p>如果把三栏布局比作一只大鸟，可以把main看成是鸟的身体，sub和extra则是鸟的翅膀。这个布局的实现思路是，先把最重要的身体部分放好，然后再将翅膀移动到适当的地方.</p>
+
+            <p>其实跟上边的圣杯布局差不多的，当然也可以改动一下（自己想想有哪些不同吧）</p>
+
+            <p>恩，这里有一只鸟~</p>
+
+            <p>左翅sub有200px,右翅extra..220px.. 身体main自适应未知</p>
+
+            <p>1.html代码中，main要放最前边，sub extra</p>
+
+            <p>2.将main sub extra 都float:left</p>
+
+            <p>3.将main占满 width:100%</p>
+
+            <p>4.此时main占满了，所以要把sub拉到最左边，使用margin-left:-100% 同理 extra使用margin-left:-220px（这时可以直接继续上边圣杯布局的步骤，也可以有所改动）</p>
+
+            <p>5.main内容被覆盖了吧，除了使用外围的padding，还可以考虑使用margin。</p>
+
+            <p>给main增加一个内层div-- main-inner, 然后margin:0 220px 0 200px</p>
+
+            <p>6.main正确展示</p>
+        </section>
+        <!-- 第二个问题结束-->
+
+        <!-- 第三个问题：谈几个好玩的标签-->
+        <section>
+            <h3><strong>3.谈几个有趣的html标签，以及它们的语义。</strong></h3>
+
+            <p>img、iframe
+                这俩标签的语义我就不说了，前者是XSS攻击、盗取cookie和refer的利器。后者是刷流量利器,某些人直接拿来刷网站流量，互换pv，起初是单纯嵌套目标地址，后来容易被查出来，手段就更新了，开始两个网站页面互相嵌套iframe标签，后来进化到一群人随机交换iframe，为了流量，为了访问的pv，感觉也是醉醉哒~</p>
+        </section>
+        <!-- 第三个问题结束-->
+
+        <!-- 第四个问题：提问易混点的属性值有哪些-->
+        <section>
+            <h3><strong>4.讲一讲CSS的position/float/display都有哪些取值，它们相互叠加时的行为都是什么？</strong></h3>
+
+            <p> position: static,absolute,relative,fixed(unavailable in IE6).</p>
+
+            <p>float: left,right,none.</p>
+
+            <p>display: none,block,inline,table-cell,inline-block,table,list-item...</p>
+        </section>
+        <!-- 第四个问题结束-->
+
+        <!-- 第五个问题：你常去的技术性论坛-->
+        <section>
+            <h3><strong>5.谈一谈你经常逛的技术性论坛</strong></h3>
+
+            <p>github：</p>
+
+            <p><a href="http://alloyteam.github.io/CodeGuide/#html-syntax" target="_blank">代码规范</a><a
+                    href="http://www.alloyteam.com/" target="_blank">腾讯前端团队</a>&nbsp;&nbsp;<a
+                    href="http://fex.baidu.com/">百度FEX</a></p>
+
+            <p>其他的诸如:</p>
+
+            <p><a href="http://segmentfault.com/" target="_blank">segmentfault</a>&nbsp;&nbsp;<a
+                    href="http://www.v2ex.com/" target="_blank">v2ex</a><a href="https://coding.net/" target="_blank">coding</a>&nbsp;&nbsp;
+                <a href="https://www.quora.com/">Quora</a></p>
+        </section>
+        <!-- 第五个问题结束-->
+    </article>
+    <!-- 文章结束-->
+</div>
+</body>
+</html>

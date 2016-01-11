@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- 设置编码方式 -->
+    <meta charset="UTF-8">
+    <!-- 就是什么版本 IE 就用什么版本的标准模式渲染 ,如果检测到 IE 并未安装 Google Frame，则弹出对话框提示安装-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <!-- 如果使用双核浏览器，强制使用webkit来进行页面渲染 -->
+    <meta name="renderer" content="webkit"/>
+    <!-- 设置seo关键词-->
+    <meta name="keywords" content="极客学院|大前端培训|前端学习">
+    <!-- 设置seo描述-->
+    <meta name="description" content="极客学院第四期大前端培训第四周作业">
+    <title>极客学院内网控制台</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- 引入样式表，bootstrap和各种插件的样式表-->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="css/index.min.css">
+    <link rel="stylesheet" href="css/skins.min.css">
+    <link rel="stylesheet" href="http://3.henuadmin.sinaapp.com/plugins/iCheck/flat/blue.css">
+    <link rel="stylesheet" href="http://3.henuadmin.sinaapp.com/plugins/morris/morris.css">
+    <link rel="stylesheet" href="http://3.henuadmin.sinaapp.com/plugins/jvectormap/jquery-jvectormap-1.2.2.css">
+    <link rel="stylesheet" href="http://3.henuadmin.sinaapp.com/plugins/datepicker/datepicker3.css">
+    <link rel="stylesheet" href="http://3.henuadmin.sinaapp.com/plugins/daterangepicker/daterangepicker-bs3.css">
+    <link rel="stylesheet" href="http://3.henuadmin.sinaapp.com/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+<!--主体部分开始-->
+<div class="wrapper">
+    <!-- 主头部开始-->
+    <header class="main-header">
+
+        <a href="" class="logo">
+            <span class="logo-mini"><b>极</b>客</span>
+            <span class="logo-lg"><b>极客</b>学院</span>
+        </a>
+        <nav class="navbar navbar-static-top" role="navigation">
+            <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                <span class="sr-only">Toggle navigation</span>
+            </a>
+        </nav>
+    </header>
+    <!-- 主头部结束-->
+
+    <!-- 主右侧菜单开始-->
+    <aside class="main-sidebar">
+        <section class="sidebar">
+            <div class="user-panel">
+                <div class="pull-left image">
+                    <img src="img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                </div>
+                <div class="pull-left info">
+                    <p>枫之醉语</p>
+                    <a href="#"><i class="fa fa-circle text-success"></i>在线</a>
+                </div>
+            </div>
+            <form action="#" method="get" class="sidebar-form">
+                <div class="input-group">
+                    <input type="text" name="q" class="form-control" placeholder="搜索...">
+                        <span class="input-group-btn">
+                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+                </button>
+              </span>
+                </div>
+            </form>
+            <ul class="sidebar-menu">
+                <li class="header">菜单</li>
+                <li class="active treeview">
+                    <a href="#">
+                        <i class="fa fa-dashboard"></i> <span>切换皮肤</span> <i class="fa fa-angle-left pull-right"></i>
+                    </a>
+                </li>
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-files-o"></i>
+                        <span>内容编写</span>
+                        <span class="label label-primary pull-right">4</span>
+                    </a>
+                    <ul class="treeview-menu">
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="fa fa-th"></i> <span>插件</span>
+                        <small class="label pull-right bg-green">new</small>
+                    </a>
+                </li>
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-pie-chart"></i>
+                        <span>表格</span>
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </a>
+                    <ul class="treeview-menu">
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-laptop"></i>
+                        <span>UI元素</span>
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </a>
+                    <ul class="treeview-menu">
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-edit"></i> <span>表格填写</span>
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </a>
+                    <ul class="treeview-menu">
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-table"></i> <span>表单</span>
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </a>
+                    <ul class="treeview-menu">
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="fa fa-calendar"></i> <span>日历</span>
+                        <small class="label pull-right bg-red">3</small>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="fa fa-envelope"></i> <span>邮件</span>
+                        <small class="label pull-right bg-yellow">12</small>
+                    </a>
+                </li>
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-folder"></i> <span>例子</span>
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </a>
+                    <ul class="treeview-menu">
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-share"></i> <span>多任务</span>
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </a>
+                    <ul class="treeview-menu">
+
+                    </ul>
+                </li>
+                <li><a href="#"><i class="fa fa-book"></i> <span>文档说明</span></a></li>
+                <li class="header">LABELS</li>
+                <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>重要说明</span></a></li>
+                <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>警示说明</span></a></li>
+                <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>使用信息</span></a></li>
+            </ul>
+        </section>
+
+    </aside>
+    <!-- 主右侧菜单结束-->
+
+    <!--内容部分-->
+    <div class="content-wrapper">
+
+        <section class="content-header">
+            <h1>
+                控制台
+                <small>详情</small>
+            </h1>
+        </section>
+
+        <section class="content">
+
+            <div class="row">
+                <div class="col-lg-3 col-xs-6">
+
+                    <div class="small-box bg-aqua">
+                        <div class="inner">
+                            <h3>150</h3>
+
+                            <p>新用户</p>
+                        </div>
+                        <div class="icon">
+                            <i class="ion ion-bag"></i>
+                        </div>
+                        <a href="#" class="small-box-footer">更多信息 <i class="fa fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-xs-6">
+
+                    <div class="small-box bg-green">
+                        <div class="inner">
+                            <h3>53<sup style="font-size: 20px">%</sup></h3>
+
+                            <p>增长率</p>
+                        </div>
+                        <div class="icon">
+                            <i class="ion ion-stats-bars"></i>
+                        </div>
+                        <a href="#" class="small-box-footer">更多信息 <i class="fa fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-xs-6">
+
+                    <div class="small-box bg-yellow">
+                        <div class="inner">
+                            <h3>44</h3>
+
+                            <p>注册用户</p>
+                        </div>
+                        <div class="icon">
+                            <i class="ion ion-person-add"></i>
+                        </div>
+                        <a href="#" class="small-box-footer">更多信息 <i class="fa fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-xs-6">
+
+                    <div class="small-box bg-red">
+                        <div class="inner">
+                            <h3>65</h3>
+
+                            <p>未注册用户</p>
+                        </div>
+                        <div class="icon">
+                            <i class="ion ion-pie-graph"></i>
+                        </div>
+                        <a href="#" class="small-box-footer">更多信息 <i class="fa fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <section class="col-lg-7 connectedSortable">
+
+                    <div class="nav-tabs-custom">
+
+                        <ul class="nav nav-tabs pull-right">
+                            <li class="active"><a href="#revenue-chart" data-toggle="tab">地区</a></li>
+                            <li><a href="#sales-chart" data-toggle="tab">饼图</a></li>
+                            <li class="pull-left header"><i class="fa fa-inbox"></i>销售状况</li>
+                        </ul>
+                        <div class="tab-content no-padding">
+
+                            <div class="chart tab-pane active" id="revenue-chart"
+                                 style="position: relative; height: 300px;"></div>
+                            <div class="chart tab-pane" id="sales-chart"
+                                 style="position: relative; height: 300px;"></div>
+                        </div>
+                    </div>
+
+
+                    <div class="box box-solid bg-green-gradient">
+                        <div class="box-header ui-sortable-handle" style="cursor: move;">
+                            <i class="fa fa-calendar"></i>
+
+                            <h3 class="box-title">日程表</h3>
+
+                            <div class="pull-right box-tools">
+
+                                <div class="btn-group">
+                                    <button class="btn btn-success btn-sm dropdown-toggle" data-toggle="dropdown"><i
+                                            class="fa fa-bars"></i></button>
+                                    <ul class="dropdown-menu pull-right" role="menu">
+                                        <li><a href="#">添加事项</a></li>
+                                        <li><a href="#">清除事项</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">日历视图</a></li>
+                                    </ul>
+                                </div>
+                                <button class="btn btn-success btn-sm" data-widget="collapse"><i
+                                        class="fa fa-minus"></i></button>
+                                <button class="btn btn-success btn-sm" data-widget="remove"><i class="fa fa-times"></i>
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <div class="box-body no-padding">
+
+                            <div id="calendar" style="width: 100%">
+                                <div class="datepicker datepicker-inline">
+                                    <div class="datepicker-days" style="display: block;">
+                                        <table class="table table-condensed">
+                                            <thead>
+                                            <tr>
+                                                <th class="prev" style="visibility: visible;">«</th>
+                                                <th colspan="5" class="datepicker-switch">November 2015</th>
+                                                <th class="next" style="visibility: visible;">»</th>
+                                            </tr>
+                                            <tr>
+                                                <th class="dow">Su</th>
+                                                <th class="dow">Mo</th>
+                                                <th class="dow">Tu</th>
+                                                <th class="dow">We</th>
+                                                <th class="dow">Th</th>
+                                                <th class="dow">Fr</th>
+                                                <th class="dow">Sa</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td class="old day">25</td>
+                                                <td class="old day">26</td>
+                                                <td class="old day">27</td>
+                                                <td class="old day">28</td>
+                                                <td class="old day">29</td>
+                                                <td class="old day">30</td>
+                                                <td class="old day">31</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="day">1</td>
+                                                <td class="day">2</td>
+                                                <td class="day">3</td>
+                                                <td class="day">4</td>
+                                                <td class="day">5</td>
+                                                <td class="day">6</td>
+                                                <td class="day">7</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="day">8</td>
+                                                <td class="day">9</td>
+                                                <td class="day">10</td>
+                                                <td class="day">11</td>
+                                                <td class="day">12</td>
+                                                <td class="day">13</td>
+                                                <td class="day">14</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="day">15</td>
+                                                <td class="day">16</td>
+                                                <td class="day">17</td>
+                                                <td class="day">18</td>
+                                                <td class="day">19</td>
+                                                <td class="day">20</td>
+                                                <td class="day">21</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="day">22</td>
+                                                <td class="day">23</td>
+                                                <td class="day">24</td>
+                                                <td class="day">25</td>
+                                                <td class="day">26</td>
+                                                <td class="day">27</td>
+                                                <td class="day">28</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="day">29</td>
+                                                <td class="day">30</td>
+                                                <td class="new day">1</td>
+                                                <td class="new day">2</td>
+                                                <td class="new day">3</td>
+                                                <td class="new day">4</td>
+                                                <td class="new day">5</td>
+                                            </tr>
+                                            </tbody>
+                                            <tfoot>
+                                            <tr>
+                                                <th colspan="7" class="today" style="display: none;">Today</th>
+                                            </tr>
+                                            <tr>
+                                                <th colspan="7" class="clear" style="display: none;">Clear</th>
+                                            </tr>
+                                            </tfoot>
+                                        </table>
+                                    </div>
+                                    <div class="datepicker-months" style="display: none;">
+                                        <table class="table table-condensed">
+                                            <thead>
+                                            <tr>
+                                                <th class="prev" style="visibility: visible;">«</th>
+                                                <th colspan="5" class="datepicker-switch">2015</th>
+                                                <th class="next" style="visibility: visible;">»</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td colspan="7"><span class="month">Jan</span><span
+                                                        class="month">Feb</span><span class="month">Mar</span><span
+                                                        class="month">Apr</span><span class="month">May</span><span
+                                                        class="month">Jun</span><span class="month">Jul</span><span
+                                                        class="month">Aug</span><span class="month">Sep</span><span
+                                                        class="month">Oct</span><span class="month">Nov</span><span
+                                                        class="month">Dec</span></td>
+                                            </tr>
+                                            </tbody>
+                                            <tfoot>
+                                            <tr>
+                                                <th colspan="7" class="today" style="display: none;">Today</th>
+                                            </tr>
+                                            <tr>
+                                                <th colspan="7" class="clear" style="display: none;">Clear</th>
+                                            </tr>
+                                            </tfoot>
+                                        </table>
+                                    </div>
+                                    <div class="datepicker-years" style="display: none;">
+                                        <table class="table table-condensed">
+                                            <thead>
+                                            <tr>
+                                                <th class="prev" style="visibility: visible;">«</th>
+                                                <th colspan="5" class="datepicker-switch">2010-2019</th>
+                                                <th class="next" style="visibility: visible;">»</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td colspan="7"><span class="year old">2009</span><span class="year">2010</span><span
+                                                        class="year">2011</span><span class="year">2012</span><span
+                                                        class="year">2013</span><span class="year">2014</span><span
+                                                        class="year">2015</span><span class="year">2016</span><span
+                                                        class="year">2017</span><span class="year">2018</span><span
+                                                        class="year">2019</span><span class="year new">2020</span></td>
+                                            </tr>
+                                            </tbody>
+                                            <tfoot>
+                                            <tr>
+                                                <th colspan="7" class="today" style="display: none;">Today</th>
+                                            </tr>
+                                            <tr>
+                                                <th colspan="7" class="clear" style="display: none;">Clear</th>
+                                            </tr>
+                                            </tfoot>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box-footer text-black">
+                            <div class="row">
+                                <div class="col-sm-6">
+
+                                    <div class="clearfix">
+                                        <span class="pull-left">任务 #1</span>
+                                        <small class="pull-right">90%</small>
+                                    </div>
+                                    <div class="progress xs">
+                                        <div class="progress-bar progress-bar-green" style="width: 90%;"></div>
+                                    </div>
+                                    <div class="clearfix">
+                                        <span class="pull-left">任务 #2</span>
+                                        <small class="pull-right">70%</small>
+                                    </div>
+                                    <div class="progress xs">
+                                        <div class="progress-bar progress-bar-green" style="width: 70%;"></div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <div class="clearfix">
+                                        <span class="pull-left">任务 #3</span>
+                                        <small class="pull-right">60%</small>
+                                    </div>
+                                    <div class="progress xs">
+                                        <div class="progress-bar progress-bar-green" style="width: 60%;"></div>
+                                    </div>
+                                    <div class="clearfix">
+                                        <span class="pull-left">任务 #4</span>
+                                        <small class="pull-right">40%</small>
+                                    </div>
+                                    <div class="progress xs">
+                                        <div class="progress-bar progress-bar-green" style="width: 40%;"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </section>
+
+                <section class="col-lg-5 connectedSortable">
+
+                    <div class="box box-solid bg-light-blue-gradient">
+                        <div class="box-header">
+
+                            <div class="pull-right box-tools">
+                                <button class="btn btn-primary btn-sm daterange pull-right" data-toggle="tooltip"
+                                        title="Date range"><i class="fa fa-calendar"></i></button>
+                                <button class="btn btn-primary btn-sm pull-right" data-widget="collapse"
+                                        data-toggle="tooltip" title="Collapse" style="margin-right: 5px;"><i
+                                        class="fa fa-minus"></i></button>
+                            </div>
+
+                            <i class="fa fa-map-marker"></i>
+
+                            <h3 class="box-title">
+                                访客
+                            </h3>
+                        </div>
+                        <div class="box-body">
+                            <div id="world-map" style="height: 250px; width: 100%;"></div>
+                        </div>
+
+                        <div class="box-footer no-border">
+                            <div class="row">
+                                <div class="col-xs-4 text-center" style="border-right: 1px solid #f4f4f4">
+                                    <div id="sparkline-1"></div>
+                                    <div class="knob-label">访客</div>
+                                </div>
+
+                                <div class="col-xs-4 text-center" style="border-right: 1px solid #f4f4f4">
+                                    <div id="sparkline-2"></div>
+                                    <div class="knob-label">在线人数</div>
+                                </div>
+
+                                <div class="col-xs-4 text-center">
+                                    <div id="sparkline-3"></div>
+                                    <div class="knob-label">离开人数</div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="box box-solid bg-teal-gradient">
+                        <div class="box-header">
+                            <i class="fa fa-th"></i>
+
+                            <h3 class="box-title">销售详情</h3>
+
+                            <div class="box-tools pull-right">
+                                <button class="btn bg-teal btn-sm" data-widget="collapse"><i class="fa fa-minus"></i>
+                                </button>
+                                <button class="btn bg-teal btn-sm" data-widget="remove"><i class="fa fa-times"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="box-body border-radius-none">
+                            <div class="chart" id="line-chart" style="height: 250px;"></div>
+                        </div>
+
+                        <div class="box-footer no-border">
+                            <div class="row">
+                                <div class="col-xs-4 text-center" style="border-right: 1px solid #f4f4f4">
+                                    <input type="text" class="knob" data-readonly="true" value="20" data-width="60"
+                                           data-height="60" data-fgColor="#39CCCC">
+
+                                    <div class="knob-label">邮箱销售</div>
+                                </div>
+
+                                <div class="col-xs-4 text-center" style="border-right: 1px solid #f4f4f4">
+                                    <input type="text" class="knob" data-readonly="true" value="50" data-width="60"
+                                           data-height="60" data-fgColor="#39CCCC">
+
+                                    <div class="knob-label">在线销售</div>
+                                </div>
+
+                                <div class="col-xs-4 text-center">
+                                    <input type="text" class="knob" data-readonly="true" value="30" data-width="60"
+                                           data-height="60" data-fgColor="#39CCCC">
+
+                                    <div class="knob-label">实体销售</div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="box box-solid bg-green-gradient">
+                        <div class="box-header">
+                            <i class="fa fa-calendar"></i>
+
+                            <h3 class="box-title">日程表</h3>
+
+                            <div class="pull-right box-tools">
+
+                                <div class="btn-group">
+                                    <button class="btn btn-success btn-sm dropdown-toggle" data-toggle="dropdown"><i
+                                            class="fa fa-bars"></i></button>
+                                    <ul class="dropdown-menu pull-right" role="menu">
+                                        <li><a href="#">添加事项</a></li>
+                                        <li><a href="#">清除事项</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">日历视图</a></li>
+                                    </ul>
+                                </div>
+                                <button class="btn btn-success btn-sm" data-widget="collapse"><i
+                                        class="fa fa-minus"></i></button>
+                                <button class="btn btn-success btn-sm" data-widget="remove"><i class="fa fa-times"></i>
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <div class="box-body no-padding">
+
+                            <div id="calendar" style="width: 100%"></div>
+                        </div>
+
+                        <div class="box-footer text-black">
+                            <div class="row">
+                                <div class="col-sm-6">
+
+                                    <div class="clearfix">
+                                        <span class="pull-left">任务 #1</span>
+                                        <small class="pull-right">90%</small>
+                                    </div>
+                                    <div class="progress xs">
+                                        <div class="progress-bar progress-bar-green" style="width: 90%;"></div>
+                                    </div>
+                                    <div class="clearfix">
+                                        <span class="pull-left">任务 #2</span>
+                                        <small class="pull-right">70%</small>
+                                    </div>
+                                    <div class="progress xs">
+                                        <div class="progress-bar progress-bar-green" style="width: 70%;"></div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <div class="clearfix">
+                                        <span class="pull-left">任务 #3</span>
+                                        <small class="pull-right">60%</small>
+                                    </div>
+                                    <div class="progress xs">
+                                        <div class="progress-bar progress-bar-green" style="width: 60%;"></div>
+                                    </div>
+                                    <div class="clearfix">
+                                        <span class="pull-left">任务 #4</span>
+                                        <small class="pull-right">40%</small>
+                                    </div>
+                                    <div class="progress xs">
+                                        <div class="progress-bar progress-bar-green" style="width: 40%;"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </section>
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <!-- footer-->
+    <footer class="main-footer">
+        <div class="pull-right hidden-xs">
+            <b>2015.11.2</b>
+        </div>
+        <strong>&copy;极客学院第四期大前端作业 <a href="http://jikexueyuan.com">枫之醉语</a>.</strong> All rights reserved.
+    </footer>
+
+    <aside class="control-sidebar control-sidebar-dark">
+
+        <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+            <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
+            <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
+        </ul>
+
+        <div class="tab-content">
+
+            <div class="tab-pane" id="control-sidebar-home-tab">
+                <h3 class="control-sidebar-heading">Recent Activity</h3>
+                <ul class="control-sidebar-menu">
+                    <li>
+                        <a href="javascript::;">
+                            <i class="menu-icon fa fa-birthday-cake bg-red"></i>
+
+                            <div class="menu-info">
+                                <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
+
+                                <p>Will be 23 on April 24th</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript::;">
+                            <i class="menu-icon fa fa-user bg-yellow"></i>
+
+                            <div class="menu-info">
+                                <h4 class="control-sidebar-subheading">Frodo Updated His Profile</h4>
+
+                                <p>New phone +1(800)555-1234</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript::;">
+                            <i class="menu-icon fa fa-envelope-o bg-light-blue"></i>
+
+                            <div class="menu-info">
+                                <h4 class="control-sidebar-subheading">Nora Joined Mailing List</h4>
+
+                                <p>nora@example.com</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript::;">
+                            <i class="menu-icon fa fa-file-code-o bg-green"></i>
+
+                            <div class="menu-info">
+                                <h4 class="control-sidebar-subheading">Cron Job 254 Executed</h4>
+
+                                <p>Execution time 5 seconds</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+
+                <h3 class="control-sidebar-heading">Tasks Progress</h3>
+                <ul class="control-sidebar-menu">
+                    <li>
+                        <a href="javascript::;">
+                            <h4 class="control-sidebar-subheading">
+                                Custom Template Design
+                                <span class="label label-danger pull-right">70%</span>
+                            </h4>
+
+                            <div class="progress progress-xxs">
+                                <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript::;">
+                            <h4 class="control-sidebar-subheading">
+                                Update Resume
+                                <span class="label label-success pull-right">95%</span>
+                            </h4>
+
+                            <div class="progress progress-xxs">
+                                <div class="progress-bar progress-bar-success" style="width: 95%"></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript::;">
+                            <h4 class="control-sidebar-subheading">
+                                Laravel Integration
+                                <span class="label label-warning pull-right">50%</span>
+                            </h4>
+
+                            <div class="progress progress-xxs">
+                                <div class="progress-bar progress-bar-warning" style="width: 50%"></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript::;">
+                            <h4 class="control-sidebar-subheading">
+                                Back End Framework
+                                <span class="label label-primary pull-right">68%</span>
+                            </h4>
+
+                            <div class="progress progress-xxs">
+                                <div class="progress-bar progress-bar-primary" style="width: 68%"></div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
+
+            <div class="tab-pane" id="control-sidebar-settings-tab">
+                <form method="post">
+                    <h3 class="control-sidebar-heading">General Settings</h3>
+
+                    <div class="form-group">
+                        <label class="control-sidebar-subheading">
+                            Report panel usage
+                            <input type="checkbox" class="pull-right" checked>
+                        </label>
+
+                        <p>
+                            Some information about this general settings option
+                        </p>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-sidebar-subheading">
+                            Allow mail redirect
+                            <input type="checkbox" class="pull-right" checked>
+                        </label>
+
+                        <p>
+                            Other sets of options are available
+                        </p>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-sidebar-subheading">
+                            Expose author name in posts
+                            <input type="checkbox" class="pull-right" checked>
+                        </label>
+
+                        <p>
+                            Allow the user to show his name in blog posts
+                        </p>
+                    </div>
+
+                    <h3 class="control-sidebar-heading">Chat Settings</h3>
+
+                    <div class="form-group">
+                        <label class="control-sidebar-subheading">
+                            Show me as online
+                            <input type="checkbox" class="pull-right" checked>
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-sidebar-subheading">
+                            Turn off notifications
+                            <input type="checkbox" class="pull-right">
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-sidebar-subheading">
+                            Delete chat history
+                            <a href="javascript::;" class="text-red pull-right"><i class="fa fa-trash-o"></i></a>
+                        </label>
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+    </aside>
+
+    <div class="control-sidebar-bg"></div>
+</div>
+<!--主体部分结束-->
+
+<!--引入js，bootstrap和各种插件的js-->
+<script src="http://3.henuadmin.sinaapp.com/plugins/jQuery/jQuery-2.1.4.min.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+    $.widget.bridge('uibutton', $.ui.button);
+</script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+<script src="http://3.henuadmin.sinaapp.com/plugins/morris/morris.min.js"></script>
+<script src="http://3.henuadmin.sinaapp.com/plugins/sparkline/jquery.sparkline.min.js"></script>
+<script src="http://3.henuadmin.sinaapp.com/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+<script src="http://3.henuadmin.sinaapp.com/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+<script src="http://3.henuadmin.sinaapp.com/plugins/knob/jquery.knob.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js"></script>
+<script src="http://3.henuadmin.sinaapp.com/plugins/daterangepicker/daterangepicker.js"></script>
+<script src="http://3.henuadmin.sinaapp.com/plugins/datepicker/bootstrap-datepicker.js"></script>
+<script src="http://3.henuadmin.sinaapp.com/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
+<script src="http://3.henuadmin.sinaapp.com/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<script src="http://3.henuadmin.sinaapp.com/plugins/fastclick/fastclick.min.js"></script>
+<script src="http://3.henuadmin.sinaapp.com/plugins/js/app.min.js"></script>
+<script src="http://3.henuadmin.sinaapp.com/plugins/js/pages/dashboard.js"></script>
+<script src="http://3.henuadmin.sinaapp.com/plugins/js/demo.js"></script>
+</body>
+
+</html>

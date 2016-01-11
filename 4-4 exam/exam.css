@@ -1,0 +1,41 @@
+/*设置css文件编码方式*/
+@charset "UTF-8";
+/*讲margin和padding初始化*/
+*{
+    margin: 0;
+    padding: 0;
+}
+/*设置container属性：行高 字体大小 字体种类*/
+.container{
+    width: 1024px;
+    margin: 20px auto;
+    line-height: 31.5px;
+    font-size: 18px;
+    font-family: Merriweather, serif;
+    color: #3A4145;
+}
+/*设置header居中*/
+header{
+    text-align: center;
+}
+article{
+    margin-top: 20px;
+}
+/*设置段落之间的间距和缩进*/
+p{
+    margin: 0 0 1.75em 0;
+    text-indent: 2em;
+}
+/*设置a标签的属性*/
+a{
+    text-decoration: none;
+}
+.p1{
+    font-size: 22px;
+}
+a:link,a:visited{
+    color: #317EF3;
+}
+a.hovel,a:active{
+    color: #666666;
+}

@@ -1,0 +1,169 @@
+/*设置文件编码方式*/
+
+@charset 'utf-8';
+
+/*初始化系统参数并设置为border box*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*设置根字体大小*/
+
+html:root {
+    font-size: 14px;
+}
+
+html {
+    position: relative;
+    height: 100%;
+}
+
+body {
+    position: relative;
+    min-width: 320px;
+    height: 100%;
+    min-height: 480px;
+}
+
+
+/*屏幕小于499px，pc隐藏*/
+
+.pc {
+    display: none;
+}
+
+.logo {
+    display: block;
+    width: 175px;
+    height: 55px;
+    margin: 22% auto 0;
+}
+
+
+/*搜索设置*/
+
+.searchbar {
+    font-size: 0;
+    width: 96%;
+    margin: 1.2rem auto 0;
+    border-collapse: collapse;
+}
+
+.searchbar button {
+    font-size: 1rem;
+    width: 25%;
+    height: 3rem;
+    vertical-align: top;
+    /*border-left: none;*/
+}
+
+.searchbar nav {
+    font-size: 1rem;
+    display: flex;
+    width: 100%;
+    margin: 1rem 0;
+}
+
+.searchbar nav > div {
+    text-align: center;
+    flex: 1;
+}
+
+.searchbar nav img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+
+/*按钮样式*/
+
+.bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.bottom .spread a {
+    line-height: 2.5rem;
+    display: inline-block;
+    width: 95%;
+    text-decoration: none;
+    color: #555;
+}
+
+.bottom .spread {
+    width: 96%;
+    margin: 0 auto;
+}
+
+.spread img {
+    height: 1rem;
+    vertical-align: middle;
+}
+
+.baidu {
+    width: 1.42rem;
+}
+
+.bottom li {
+    font-size: 13px;
+    line-height: 2rem;
+    display: block;
+    width: 88%;
+    margin: 0 auto;
+    list-style: none;
+    /*padding: 0.3rem 1rem;*/
+}
+
+.bottom .btns {
+    font-size: 0;
+    width: 88%;
+    margin: 1rem auto;
+}
+
+.bottom .btns a {
+    font-size: 1rem;
+    line-height: 1.6rem;
+    display: inline-block;
+    width: 48%;
+    padding: 0 10%;
+    text-align: center;
+    vertical-align: top;
+    text-decoration: none;
+    color: #555;
+    border: 1px solid #ececec;
+}
+
+.bottom .btns a:first-of-type {
+    margin-right: 2%;
+}
+
+.bottom .btns a:last-of-type {
+    margin-left: 2%;
+}
+
+.bottom p {
+    font-size: 10px;
+    line-height: 1.5rem;
+    width: 100%;
+    margin-bottom: .5rem;
+    text-align: center;
+    color: #aaa;
+}
+
+.input input {
+    border: none;
+    /*line-height: 2rem;*/
+}
+
+.input {
+    display: inline-block;
+    width: 75%;
+    height: 3rem;
+    border: 1px solid #555;
+}

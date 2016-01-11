@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="极客学院|大前端培训|前端学习">
+    <meta name="description" content="极客学院第四期大前端培训第二周作业">
+    <title>正常盒子和怪异盒子的比较</title>
+    <!-- 引入内部样式表-->
+    <style type="text/css">
+
+        /*正常盒子*/
+        .content-box {
+            padding: 10px;
+            background: #500;
+            height: 100px;
+            width: 100px;
+            border: 5px solid #ff0000;
+            margin: 100px;
+        }
+
+        /*怪异盒子*/
+        .border-box {
+            padding: 10px;
+            background: #050;
+            height: 130px;
+            width: 130px;
+            border: 5px solid #00ff00;
+            margin: 100px;
+            box-sizing: border-box;
+        }
+
+    </style>
+</head>
+<body>
+<!--正常盒子-->
+<div class="content-box"></div>
+<!--怪异盒子-->
+<div class="border-box"></div>
+</body>
+</html>

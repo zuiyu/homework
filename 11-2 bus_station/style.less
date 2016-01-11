@@ -1,0 +1,106 @@
+@color1: #DC7B75;
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    width: 480px;
+    margin: 0 auto;
+    font:14px/1.5 "Helvetica";
+}
+
+.station {
+    margin-top: 10px;
+    .line {
+        width: 35%;
+        display: inline-block;
+        .line-num {
+            background-color: @color1;
+            color: #fff;
+            font-size: 45px;
+            font-weight: 700;
+            text-align: center;
+            line-height: 1.5em;
+        }
+        .line-time {
+            text-align: right;
+            font-size: 0.9em;
+            line-height: 2em;
+        }
+        .line-way {
+            width: 70%;
+            text-align: center;
+            .character {
+                color: #859690;
+                font-size: 18px;
+            }
+            .alphabeta {
+                color: #000;
+            }
+        }
+    }
+    .site {
+        width: 60%;
+        display: inline-block;
+        vertical-align: top;
+        .line-way {
+            text-align: center;
+            .character {
+                color: #859690;
+                font-size: 25px;
+                font-weight: bold;
+            }
+            .alphabeta {
+                color: #000;
+                font-size: 0.9em;
+            }
+        }
+        .site-name {
+            font-size: 30px;
+            line-height: 1.5em;
+            color: red;
+            font-weight: bold;
+            text-align: center;
+            color: #D3828B;
+        }
+    }
+    .all {
+        background-color: #5B7461;
+        clear: both;
+        text-align: center;
+
+        ul {
+            list-style-type: none;
+            overflow: hidden;
+            color: #fff;
+            padding: 6px 0 20px;
+            display: flex;
+            width: 100%;
+            height: 8rem;
+            li {
+                width: 1em;
+                text-align: center;
+                font-weight: bold;
+                flex:1;
+                height: 100%;
+                div{
+                    display: flex;
+                    flex-direction: column;
+                    height: 100%;
+                    justify-content:space-between;
+                    align-self: stretch;
+                    span{
+                        flex:1;
+                        justify-content: space-between;
+                        align-self: stretch;
+                    }
+                }
+            }
+        }
+    }
+    footer {
+        margin: 10px 0;
+        text-align: center;
+    }
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="MobileOptimized" content="320">
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="font-awesome-4.4.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="jquery.min.js"></script>
+</head>
+
+<body>
+    <nav>
+        <table>
+            <tr>
+                <td class="cur">推荐</td>
+                <td>百家</td>
+                <td>本地</td>
+                <td>图片</td>
+                <td>娱乐</td>
+                <td>社会</td>
+            </tr>
+            <tr>
+                <td>军事</td>
+                <td>科技</td>
+                <td colspan="2">互联网</td>
+                <td>女人</td>
+                <td hidden>搞笑</td>
+                <td class="more">更多<i class="fa fa-caret-down"></i></td>
+            </tr>
+            <tr hidden>
+                <td>生活</td>
+                <td>国际</td>
+                <td>国内</td>
+                <td>体育</td>
+                <td>汽车</td>
+                <td>财经</td>
+            </tr>
+            <tr hidden>
+                <td>房产</td>
+                <td>时尚</td>
+                <td>体育</td>
+                <td>游戏</td>
+                <td>旅游</td>
+                <td>人文</td>
+            </tr>
+            <tr hidden>
+                <td colspan="2">创意</td>
+                <td colspan="2">互联网+</td>
+            </tr>
+        </table>
+        <div class="slide">
+            <div>记者榜</div>
+            <div>媒体榜</div>
+            <div>删除及排序</div>
+            <label class="pack">收起<i class="fa fa-caret-up"></i></label>
+        </div>
+    </nav>
+    <div class="carousel">
+        <div class="imgs">
+            <img src="img/a686c9177f3e6709de17d0143dc79f3df9dc55c1.jpg" alt="">
+            <img src="img/timg (1).jpg" alt="">
+            <img src="img/timg.jpg" alt="">
+        </div>
+        <ul>
+            <li class="on"></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <div class="newslist">
+    </div>
+    <div class="btn">
+        点击加载更多
+    </div>
+    <script type="text/javascript">
+    $.getJSON("news.php", null, function(data) {
+        $.each(data, function(index, val) {
+            //console.trace(val);
+            $(".newslist").append($('<div class="news"><img src="img/' + val.img + '"><section><h4>' + val.title.substr(0, 12) + '</h4><p>' + val.content.substr(0, 15) + '</p><time>' + val.time + '</time></section></div>'));
+        });
+    }, "json");
+    $(document).ready(function() {
+        $(".more").on("click", function() {
+            $(this).hide().prev().show();
+            $(".slide").show();
+            $("nav table tr").show();
+        });
+        $(".pack").on("click", function() {
+            $(".more").show().prev().hide().closest("tr").nextAll("tr").hide();
+            $(".slide").hide();
+        });
+        //alert($(".imgs").offset().left);
+        var n = 1;
+        setInterval(function() {
+            $(".imgs").css({
+                transform: "translateX(" + -n % 3 / 3 * $(".imgs").width() + "px)"
+            });
+            $(".on").removeClass("on");
+            $(".carousel ul li").eq(n % 3).addClass("on");
+            n++;
+        }, 2000);
+        $(".btn").on("click", function() {
+            $(this).text("加载中");
+            $.getJSON("news.php", {"first":$(".news").length}, function(data) {
+                $.each(data, function(index, val) {
+                    //console.trace(val);
+                    $(".newslist").append($('<div class="news"><img src="img/' + val.img + '"><section><h4>' + val.title.substr(0, 12) + '</h4><p>' + val.content.substr(0, 15) + '</p><time>' + val.time + '</time></section></div>'));
+                });
+                $(".btn").text("加载更多");
+            }, "json");
+        });
+    });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>计算器</title>
+    <!-- 设置编码方式 -->
+    <meta charset="UTF-8">
+    <!-- 就是什么版本 IE 就用什么版本的标准模式渲染 ,未安装chrome，弹框提示安装-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <!-- 如果使用双核浏览器，强制使用webkit来进行页面渲染 -->
+    <meta name="renderer" content="webkit"/>
+    <!-- 设置seo关键词-->
+    <meta name="keywords" content="极客学院|大前端培训|前端学习">
+    <!-- 设置seo描述-->
+    <meta name="description" content="极客学院第四期大前端培训第六周作业">
+    <!-- 引入样式表 -->
+    <link href="css/calculator.css" type="text/css" rel="stylesheet">
+    <!-- 引入html5.js-->
+    <!–[if IE]>
+    <script src="js/html5.js"></script>
+    <![endif]–>
+</head>
+
+<body>
+<!-- 结果框 -->
+<div class="result">
+    <div>0</div>
+</div>
+<!-- 数字按钮和功能键 -->
+<table>
+    <tr>
+        <td onclick="AC()">AC</td>
+        <td onclick="cacl(this)">Mod</td>
+        <td onclick="fl(this)">abs</td>
+        <td onclick="fl(this)">%</td>
+
+    </tr>
+    <tr>
+
+        <td onclick="fl(this)">sin</td>
+        <td onclick="fl(this)">cos</td>
+        <td onclick="fl(this)">tan</td>
+        <td onclick="cacl(this)">÷</td>
+    </tr>
+    <tr>
+        <td onclick="num(this)">7</td>
+        <td onclick="num(this)">8</td>
+        <td onclick="num(this)">9</td>
+        <td onclick="cacl(this)">×</td>
+    </tr>
+    <tr>
+        <td onclick="num(this)">4</td>
+        <td onclick="num(this)">5</td>
+        <td onclick="num(this)">6</td>
+        <td onclick="cacl(this)">-</td>
+    </tr>
+    <tr>
+        <td onclick="num(this)">1</td>
+        <td onclick="num(this)">2</td>
+        <td onclick="num(this)">3</td>
+        <td onclick="cacl(this)">+</td>
+    </tr>
+    <tr>
+        <td colspan="2" onclick="num(this)">0</td>
+        <td onclick="num(this)">.</td>
+        <td onclick="result()">=</td>
+    </tr>
+</table>
+</body>
+<!-- 引入calculator.js -->
+<script src="js/calculator.js"></script>
+</html>

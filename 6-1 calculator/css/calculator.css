@@ -1,0 +1,81 @@
+/*设置编码方式*/
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*设置字体样式 --在Mac win linux上最佳显示字体*/
+html {
+    font-family: "Lucida Grande", "Helvetica Neue", "Arial", "Hiragino Sans GB", "Noto Sans CJK SC", "Heiti SC", "Microsoft YaHei", "WenQuanYi Microhei", sans-serif;
+}
+
+html {
+    behavior: url(../ie-css3.htc);
+    height: 100%;
+}
+body{
+    height: 100%;
+    position: relative;
+    /*计算器最小宽高*/
+    min-height: 550px;
+    min-width: 400px;
+    overflow-x: hidden;
+}
+/*容器*/
+.container{
+    position: absolute;
+    width:400px;
+    top: 50%;
+    left: 50%;
+    margin-top: -275px;
+    margin-left: -200px;
+}
+/*结果框*/
+.result {
+    background: linear-gradient(left, #A3644C, #39262F);
+    background: -webkit-linear-gradient(left, #A3644C, #39262F);
+    width: 400px;
+    height: 150px;
+    font-size: 80px;
+    text-align: right;
+    color: #fff;
+    overflow: hidden;
+    width:100%;
+}
+
+.result > div {
+    margin-right: 30px;
+    margin-top: 30px;
+}
+
+/*输入框和运算按钮*/
+table {
+    width: 400px;
+    height: 400px;
+    text-align: center;
+    border-spacing: 0;
+    border-collapse: collapse;
+    font-size: 30px;
+    font-weight: bolder;
+    table-layout: fixed;
+}
+
+table td {
+    background: #e4e4e4;
+    border: 1px solid #898989;
+    width: 25%;
+    cursor: pointer;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+table tr td:active{
+    background-color: #D6D1D1;
+}
+
+tr td:last-of-type {
+    background: #F59233;
+    color: #fff;
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- 设置编码方式 -->
+    <meta charset="UTF-8">
+    <!-- 就是什么版本 IE 就用什么版本的标准模式渲染 ,如果检测到 IE 并未安装 Google Frame，则弹出对话框提示安装-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <!-- 如果使用双核浏览器，强制使用webkit来进行页面渲染 -->
+    <meta name="renderer" content="webkit"/>
+    <!-- 设置seo关键词-->
+    <meta name="keywords" content="极客学院|大前端培训|前端学习">
+    <!-- 设置seo描述-->
+    <meta name="description" content="极客学院第四期大前端培训第四周作业">
+    <title>百度一下，你就知道</title>
+    <!-- 当设备宽度大于500时，判断为pc端，引入pc.css 否则判断为移动端，引入m.css-->
+    <link media="screen and (min-device-width:500px)" rel="stylesheet" href="css/pc.css">
+    <link media="screen and (max-device-width:499px)" rel="stylesheet" href="css/m.css">
+    <link media="screen and (min-width:500px)" rel="stylesheet" href="css/pc.css">
+    <link media="screen and (max-width:499px)" rel="stylesheet" href="css/m.css">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0">
+</head>
+
+<body>
+    <div class="pc" style="height: 100%;">
+        <div id="baba">
+            <!-- 右侧导航栏 -->
+            <nav>
+                <ul>
+                    <li><a href="http://news.baidu.com/"><b>新闻</b></a></li>
+                    <li><a href="http://www.hao123.com/">hao123</a></li>
+                    <li><a href="http://map.baidu.com/"><b>地图</b></a></li>
+                    <li><a href="http://v.baidu.com/"><b>视频</b></a></li>
+                    <li><a href="http://tieba.baidu.com/"><b>贴吧</b></a></li>
+                    <li><a href="https://passport.baidu.com/v2/?login&tpl=mn&u=http%3A%2F%2Fwww.baidu.com%2F">登录</a></li>
+                    <li><a href="http://www.baidu.com/gaoji/preferences.html">设置</a></li>
+                    <li><a href="https://www.baidu.com/more/" id="last">更多产品</a></li>
+                </ul>
+            </nav>
+            <!-- logo和搜索框 -->
+            <div id="container">
+                <div id="ba">
+                    <img src="images/bd_logo1.png">
+                    <div class="search">
+                        <!--添加action地址，搜索框可直接搜索  -->
+                        <form action="http://www.baidu.com/s">
+                            <div class="input"><input type="search" name="wd" autofocus></div>
+                            <button type="submit">百度一下</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- footer -->
+            <footer>
+                <p>
+                    <a href="https://www.baidu.com/cache/sethelp/help.html">把百度设为主页</a>
+                    <a href="http://home.baidu.com/">关于百度</a>
+                    <a href="http://ir.baidu.com/phoenix.zhtml?c=188488&p=irol-homeprofile">About Baidu</a>
+                </p>
+                <p>
+                    ©2015 Baidu
+                    <a href="http://www.baidu.com/duty/">使用百度前必读</a>
+                    <a href="http://jianyi.baidu.com/">意见反馈</a> 京ICP证030173号
+                </p>
+            </footer>
+        </div>
+    </div>
+
+    <!-- 手机页面开始-->
+    <div class="m">
+        <!-- 图片logo-->
+        <img src="images/plus_logo.png" class="logo">
+        <!-- 搜索主体部分-->
+        <div class="searchbar">
+            <form action="http://www.baidu.com/s">
+                <div class="input"><input type="search" name="wd"></div>
+                <button>百度一下</button>
+            </form>
+            <nav>
+                <div><img src="images/1.png"><br/>新闻</div>
+                <div><img src="images/2.png"><br/>小说</div>
+                <div><img src="images/3.png"><br/>视频</div>
+                <div><img src="images/4.png"><br/>生活+</div>
+                <div><img src="images/5.png"><br/>地图</div>
+                <div><img src="images/6.png"><br/>更多</div>
+            </nav>
+        </div>
+        <!-- 下方文字和footer-->
+        <div class="bottom">
+            <div class="spread">
+                <li><a href=""><img src="images/hot.png"> 百度浏览器，上网提速20%</a><img src="images/row.png"></li>
+                <li><a href=""><img src="images/baidu.png" class="baidu"> 手机百度，最省流量的极速搜索APP</a><img src="images/row.png"></li>
+                <li><a href=""><img src="images/hot.png"> 百度推广，让有需求的客户找到你</a><img src="images/row.png"></li>
+            </div>
+            <div class="btns">
+                <a href="javascript:;">极速版</a>
+                <a href="javascript:;">用户反馈</a>
+            </div>
+            <p>使用百度前必读 Baidu 京ICP证030173号</p>
+        </div>
+    </div>
+</body>
+
+</html>

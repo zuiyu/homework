@@ -1,0 +1,41 @@
+html,body,ul,li,p,div,form,h1,h2,h3,h4,h5,h6,img,a img{padding:0;margin:0;border:0;}
+ul,li{list-style:none;}
+h1,h2,h3,h4,h5,h6,b,i,em{font-size:1em;font-weight:normal;font-style:normal;}
+body,button,textarea,select{font:normal 14px/1.5 "Microsoft YaHei","Microsoft JhengHei",STHeiti,MingLiu,san-serif;outline:none;color:#19191b;font-family: "Microsoft YaHei","\9ED1\4F53",Arial,sans-serif}
+a{text-decoration:none;color:#459ae9;-webkit-tap-highlight-color:rgba(255, 255, 255, 0);}
+.img img,video{vertical-align:middle;}
+html{-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(255, 255, 255, 0);}
+body{min-width:320px;margin:0 auto;background:#eaeeef url(../img/settings-bg.jpeg) repeat top left;}
+body *{-webkit-text-size-adjust:none;}
+input,textarea{-webkit-tap-highlight-color:rgba(255, 255, 255, 0)}
+.i{display: inline-block;vertical-align: middle;}
+a.link:hover{text-decoration: underline;}
+a.fuc:hover{text-decoration: underline;}
+a.opt:hover{text-decoration: underline;}
+
+.main{ border:1px solid #bdbdbd;position:relative;background: #fff; font-weight: normal; color: #000; width: 760px; padding: 0 20px 20px; margin: 0 auto; margin-top: 120px;}
+.main .title{ height:80px; border-bottom: #bdbdbd 1px solid; display: block; line-height: 80px;
+font-size: 30px;}
+.main .left{margin-top:30px; width:42%; display: inline-block;margin-right:5%;}
+.main p{line-height: 24px;}
+.main .box{width: 45%; display: inline-block; vertical-align: top; margin-top: 30px;  border: 1px solid #ededee; padding: 20px}
+.main .box input{width:90%; line-height: 30px; margin: 10px 0;}
+.ok{ padding:0 20px;line-height: 30px; margin: 5px 0;  background: #29BC61; color: #fff; margin: 10px 0; border: 2px solid #18AB52; border-radius: 4px; line-height: 30px;}
+footer{line-height: 30px; width: 960px; margin: 20px auto; padding: 0 20px; text-align: center; color: #ababab;}
+.index{width:100%; text-align:center;}
+.link{ background: #44b549;; color:#fff; padding:5px 10px; border-radius: 4px;}
+.warn {
+    background: #44B549;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+    width: 340px;
+    line-height: 32px;
+    color: #fff;
+    margin: 0 auto;
+    text-align: center;
+    display: none;
+}

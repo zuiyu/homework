@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="极客学院|大前端培训|前端学习">
+    <meta name="description" content="极客学院第四期大前端培训第二周作业">
+    <title>旧弹性盒子水平垂直居中</title>
+    <!-- 引入内部样式表-->
+    <style type="text/css">
+        /*flex水平排列，垂直居中*/
+
+        .flexbox {
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            background: #bbb;
+            display: -webkit-box;
+            display: -moz-box;
+            display: box;
+            -webkit-box-align: center;
+            box-align: center;
+        }
+
+        .flexbox li {
+            width: 20px;
+            height: 40px;
+            margin: 2px;
+            background: #b00;
+            line-height: 40px;
+            list-style-type: none;
+            color: #fff;
+            text-align: center;
+        }
+
+        /*flex垂直排列，水平居中*/
+
+        .flexbox1 {
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            background: #bbb;
+            display: -webkit-box;
+            -webkit-box-align: center;
+            -webkit-box-orient: vertical;
+        }
+
+        .flexbox1 li {
+            width: 20px;
+            height: 40px;
+            margin: 2px;
+            background: #b00;
+            line-height: 40px;
+            list-style-type: none;
+            color: #fff;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+<!--flex水平排列，垂直居中-->
+<div class="flexbox">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</div>
+<!--flex垂直排列，水平居中-->
+<div class="flexbox1">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</div>
+</body>
+
+</html>

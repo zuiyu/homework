@@ -1,0 +1,71 @@
+<html>
+<meta charset="utf8">
+<title>超级大学</title>
+<link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+    <div class="header">
+        <div class="head">
+            <div class="usrbar">
+                <div class="usrstatus">
+                    <div class="info">
+                        <span class="nm" style="line-height:38px">管理员</span>
+                        <span class="logout"><a href="signout" style="line-height:38px" class="fuc">退出</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="body">
+        <div class="table">
+            <div class="nav">
+                <a href="manage.php"><label>新闻列表</label></a>
+                <label  class="active">添加新闻</label>
+            </div>
+        </div>
+        <div class="publish">
+            <form action="add.php" method="post" enctype="multipart/form-data">
+            <div class="item">标题：<div class="input" ><input name="title"></div></div>
+            <div class="item">内容：<div class="content"><textarea  name="content"></textarea></div></div>
+            <div class="item">图片：<img src="img/add.png" id="pre"></div><input id="img" hidden type="file" onchange="previewImage(this)" name="file">
+            <div class="button">提交</div>
+        </div>
+    </div>
+    <div class="warn">
+    </div>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.form.min.js"></script>
+    <script type="text/javascript">
+    $(".item img").on("click",function(){
+        $("#img").click();
+    });
+    $(".button").on("click",function(){
+        $("form").ajaxSubmit({
+            resetForm: true,
+            dataType:"json",
+            success:function(data){
+                if(data.status==1)
+                {
+                    $(".warn").text(data.msg).show().delay(2000).hide(0);
+                    $("#pre").attr("src","img/add.png");
+                }else{
+                    $(".warn").css("background-color","brown").text(data.msg).show().delay(2000).hide(0);
+                }
+            }
+        });
+    });
+    function previewImage(file)
+    {
+      var MAXWIDTH  = 260; 
+      var MAXHEIGHT = 180;
+      if (file.files && file.files[0])
+      {
+          var img = document.getElementById('pre');
+          var reader = new FileReader();
+          reader.onload = function(evt){img.src = evt.target.result;}
+          reader.readAsDataURL(file.files[0]);
+      }
+  }
+    </script>
+</body>
+</html>

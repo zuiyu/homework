@@ -1,0 +1,129 @@
+/*设置编码方式*/
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*设置body的样式*/
+body {
+    background-color: #0D7792;
+    font-family: Simsun Helvetica;
+    font-size: 12px;
+}
+
+/*top的样式开始*/
+.top ul {
+    list-style: none;
+    margin-left: 470px;
+
+}
+
+.top img {
+    display: block;
+    margin-left: -12px;
+    margin-top: 10px;
+}
+
+.top ul li {
+    float: left;
+    color: #FF0099;
+    padding: 0 5px;
+}
+
+/*去掉a标签的下滑线*/
+.top ul li a {
+    text-decoration: none;
+}
+
+/*更改鼠标点击颜色*/
+.top a:link, a:visited {
+    color: #FF0099;
+}
+
+.top a:active, a:hover {
+    color: #317EF3;
+}
+
+/*去掉a标签的下滑线*/
+.container p a {
+    text-decoration: none;
+}
+
+.container a:link, a:visited {
+    color: #FF0099;
+}
+
+.container a:active, a:hover {
+    color: #317EF3;
+}
+
+.info {
+    background-color: #FFF;
+    width: 600px;
+    padding: 0 50px;
+    margin: 10px auto;
+    border-radius: 40px;
+    overflow: hidden;
+}
+
+.info h3 {
+    text-align: center;
+    line-height: 40px;
+}
+
+.container {
+    border: 1px solid #ddd;
+}
+
+.info p {
+    text-align: center;
+}
+
+.menubar {
+    background-color: #EEE;
+    color: #003399;
+    font-weight: bold;
+    text-indent: 5px;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+/*table样式*/
+table {
+    border-collapse: collapse;
+}
+
+table tr td {
+    border-top: 1px solid #ddd;
+    padding: 3px;
+}
+
+table tr:last-of-type td {
+    border-bottom: 1px solid #ddd;
+}
+
+.info table tr td:first-of-type {
+    border-right: solid 1px #ddd;
+    width: 120px;
+    text-align: right;
+}
+
+.info table textarea {
+    width: 400px;
+    height: 100px;
+}
+
+.info button {
+    width: 80px;
+    text-align: center;
+    display: block;
+    margin: 20px 260px;
+}
+
+/*footer样式*/
+.footing {
+    text-align: center;
+    margin-top: 10px;
+    padding-bottom: 10px;
+}

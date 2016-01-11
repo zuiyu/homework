@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>计算器</title>
+    <!-- 设置编码方式 -->
+    <meta charset="UTF-8">
+    <!-- 就是什么版本 IE 就用什么版本的标准模式渲染 ,未安装chrome，弹框提示安装-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <!-- 如果使用双核浏览器，强制使用webkit来进行页面渲染 -->
+    <meta name="renderer" content="webkit" />
+    <!-- 设置seo关键词-->
+    <meta name="keywords" content="极客学院|大前端培训|前端学习">
+    <!-- 设置seo描述-->
+    <meta name="description" content="极客学院第四期大前端培训第六周作业">
+    <!-- 引入样式表 -->
+    <link href="css/calculator.css" type="text/css" rel="stylesheet">
+    <!-- 引入html5.js-->
+     <!–[if IE]>
+    <script src="js/html5.js"></script>
+    <![endif]–>
+</head>
+
+<body>
+    <div class="container">
+        <!-- 结果框 -->
+        <div class="result">
+            <div>0</div>
+        </div>
+        <!-- 数字按钮和功能键 -->
+        <table>
+            <tr>
+                <td>AC</td>
+                <td>Mod</td>
+                <td>abs</td>
+                <td>%</td>
+            </tr>
+            <tr>
+                <td>sin</td>
+                <td>cos</td>
+                <td>tan</td>
+                <td>÷</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td>×</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>+</td>
+            </tr>
+            <tr>
+                <td colspan="2">0</td>
+                <td>.</td>
+                <td>=</td>
+            </tr>
+        </table>
+    </div>
+</body>
+<!-- 引入calculator.js -->
+<script src="js/calculator.js"></script>
+
+</html>

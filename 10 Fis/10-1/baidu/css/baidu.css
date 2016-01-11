@@ -1,0 +1,232 @@
+/*初始化margin和padding*/
+* {
+    margin: 0;
+    padding: 0;
+    behavior: url(ie-css3.htc);
+}
+/*引入ie-css3 适配ie*/
+html {
+    height: 100%;
+    position: relative;
+    overflow-y: auto;
+    behavior: url(ie-css3.htc);
+}
+body {
+    font-size: 13px;
+    font-family: arial;
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    background: #D4DBE5;
+}
+#top{
+    width:100%;
+    position: relative;
+    height:30px;
+    line-height: 30px;
+    background: #929BA9;
+}
+/*设置nav点击时候的属性*/
+nav {
+    position: absolute;
+    right:0;
+    top: 0px;
+    z-index: 1000;
+}
+nav > ul {
+    list-style-type: none;
+    line-height: 30px;
+}
+nav > ul > li {
+    display: inline-block;
+}
+nav > ul > li a {
+    margin: 0 8px;
+}
+nav > ul > li a:link, nav ul li a:visited {
+    color: #fff;
+}
+nav > ul > li a:hover, nav ul li a:active {
+    color: #fff;
+}
+nav > ul > li:last-of-type a {
+    color: #fff;
+    background: #38f;
+    padding: 7px 10px;
+    text-decoration: none;
+    margin-right:0;
+}
+.right-more{
+    position: absolute;
+    right: 0;
+    top: 0;
+    list-style-type: none;
+    display: none;
+    width: 72px;
+    background: #fff;
+    text-align: center;
+    height: 100%;
+    z-index: 10000;
+}
+.right-more li{
+    height: 60px;
+    margin:10px 0;
+}
+.right-more li:first-of-type{
+    height:30px;
+}
+#baba {
+    position: relative;
+    display: block;
+    min-width: 810px;
+    height: 100%;
+    min-height: 650px;
+}
+#ba {
+    position: relative;
+    top: 38.2%;
+}
+#container {
+    position: relative;
+    height: 100%;
+    top: -281px;
+}
+#ba>img {
+    width: 270px;
+    height: 129px;
+    margin: 20px auto;
+    display: block;
+    position: relative;
+}
+.search {
+    white-space: 0;
+    letter-spacing: -4px;
+    margin: 0 auto;
+    margin-top: 22px;
+    width: 650px;
+}
+.search input {
+    width: 540px;
+    height: 41px;
+    line-height: 30px;
+    text-indent: 4px;
+    outline: 0;
+    border: 1px solid #b6b6b6;
+    border-right: none;
+    letter-spacing: 0;
+    vertical-align: top;
+    box-shadow:1px 1px 1px rgba(0,0,0,0.2);
+}
+.search button {
+    width: 100px;
+    height: 40px;
+    color: #000;
+    background: #EBEBEB;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 0;
+    vertical-align: top;
+    box-shadow:1px 1px 1px rgba(0,0,0,0.2);
+}
+.center-box{
+    background: rgba(255, 255, 255, 0.6);
+    min-height: 300px;
+    width: 1000px;
+    margin: 40px auto 0 auto;
+}
+.top-menu{
+    line-height: 36px;
+    border-bottom: #E0E3E5 1px solid;
+    font-size:0;
+}
+.men{
+    display: inline-block;
+    padding: 2px 25px;
+    font-size: 14px;
+}
+.on{
+    background: rgba(198, 205, 214, 0.2);
+    font-weight: bolder;
+}
+.top-body{
+    padding: 0 20px;
+}
+.mydaohang{
+    line-height:40px;
+}
+.mydaohang input{
+    vertical-align: middle;
+}
+.daohang a{
+    display: inline-block;
+    width: 150px;
+    text-align: left;
+    line-height: 40px;
+    color: #333;
+    text-decoration: none;
+    margin: 0 15px;
+}
+.daohang a:hover{
+    background: #fff;
+}
+.daohang:nth-of-type(1) a{
+    background: #fff;
+    margin:5px 15px;
+}
+.mydaohang .left{
+    width: 720px;
+    display: inline-block;
+}
+.mydaohang .right{
+    float: right;
+    display: none;
+}
+.daohang a img{
+    vertical-align: middle;
+    padding: 0 4px;
+}
+.copy{
+    margin-top: 30px;
+    text-align: center;
+    color: #fff;
+}
+.copy a{
+    color: #fff;
+}
+.i{
+    display: inline-block;
+    vertical-align: middle;
+    background-position: center;
+    background-size: 14px;
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 14px;
+}
+
+.i1{
+    background-image: url(../images/2556.png?__sprite);
+}
+
+.i2{
+    background-image: url(../images/95488.png?__sprite);
+}
+
+.i3{
+    background-image: url(../images/95487.png?__sprite);
+}
+
+.i4{
+    background-image: url(../images/95499.png?__sprite);
+}
+
+.i5{
+    background-image: url(../images/95475.png?__sprite);
+}
+
+.i6{
+    background-image: url(../images/95500.png?__sprite);
+}
+
+.i7{
+    background-image: url(../images/95691.png?__sprite);
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="极客学院|大前端培训|前端学习">
+    <meta name="description" content="极客学院第四期大前端培训第三周作业">
+    <title>双飞翼布局</title>
+    <!-- 引入外部样式表-->
+    <!-- 思路：如果main要给左边的left模块和右边的right模块都让出一定宽度来的话，只有padding：0 100px 0 200px;或者margin：0 100px 0 200px;这两种方式！这两条路线，如果走margin路线， 一路走下去，写出的代码就是双飞翼，如果走padding路线，那就是圣杯！-->
+    <link href="css/two-wings.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<!--头部-->
+<div class="header">
+    <p>#header</p>
+</div>
+<!--容器-->
+<div class="container">
+    <div class="middle">
+        <!-- 用inner可以相对于圣杯布局，减少6-2=4行代码，更简洁-->
+        <!-- 不使用position：relative，可维护性更好-->
+        <div class="inner">#middle</div>
+    </div>
+    <div class="left">
+        #left
+    </div>
+    <div class="right">
+        #right
+    </div>
+</div>
+<!--尾部-->
+<div class="footer">#footer</div>
+</body>
+</html>

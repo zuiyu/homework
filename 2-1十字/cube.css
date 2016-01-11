@@ -1,0 +1,48 @@
+/*设置编码utf-8*/
+@charset "UTF-8";
+/*全局设置：magin和padding=0*/
+*{
+	margin: 0;
+	padding: 0;
+}
+/*对div全体生效*/
+.parent{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -150px;
+	margin-top: -150px;
+	width:300px;
+	height: 300px;
+}
+/*对div里面的四个背景颜色和图片生效*/
+.parent div{
+	width: 100px;
+	height: 100px;
+	box-shadow: 3px 3px 3px #aaa;
+}
+.div1{
+	background-color: pink;
+	margin-left: 100px;
+}
+.div2{
+	background-color: yellow;
+	display: inline-block;
+	vertical-align: top;
+}
+.center{
+	display: inline-block;
+	vertical-align: top;
+}
+.center img{
+	padding: 38px;
+}
+.div3{
+	background-color: blue;
+	display: inline-block;
+	vertical-align: top;
+}
+.div4{
+	background-color: green;
+	margin-left: 100px;
+}

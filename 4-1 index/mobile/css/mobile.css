@@ -1,0 +1,301 @@
+/*设置文件编码方式*/
+@charset "UTF-8";
+/*对属性进行初始化*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: arial "SimHei" helvetica;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+/*设置手机页面容器的基本属性*/
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+}
+
+.page {
+    height: 100%;
+}
+
+/*top：第一屏的样式*/
+#top {
+    background: #129C73;
+    text-align: center;
+    color: #fff;
+}
+
+#top h3 {
+    margin-top: 10%;
+    font-size: 52px;
+    line-height: 60px;
+    font-weight: bolder;
+}
+
+#top p {
+    font-size: 20px;
+    line-height: 80px;
+    font-weight: 500;
+}
+
+#top img {
+    width: 50%;
+    margin: 10% 0;
+}
+
+.fa-angle-double-down {
+    /*bottom: 80px;*/
+    display: block;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    font-size: 30px;
+    animation: down infinite linear 1.5s;
+    -webkit-animation: down infinite linear 1.5s;
+}
+
+@-webkit-keyframes down {
+    from {
+        bottom: 2.5rem;
+    }
+    to {
+        bottom: 0.8rem;
+    }
+}
+
+@-webkit-keyframes down {
+    from {
+        bottom: 2.5rem;
+    }
+    to {
+        bottom: 0.8rem;
+    }
+}
+
+/*功能列表*/
+#functions {
+    height: 100%;
+}
+
+#functions table {
+    width: 100%;
+    padding: 10px 2%;
+    height: 100%;
+    color: #666666;
+    line-height: 1.5rem;
+}
+
+#functions table tr {
+    vertical-align: center;
+}
+
+#functions table tr td {
+    border: 1px solid #666666;
+    margin-top: 20px;
+    border-radius: 2px;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    line-height: 3rem;
+    margin-top: 1rem;
+}
+
+.nocenter {
+    text-align: left;
+}
+
+/*入驻用户*/
+.scroll {
+    overflow: hidden;
+    height: 100%;
+}
+
+.scroll .cycle {
+    height: 80%;
+    position: relative;
+}
+
+.scroll li {
+    list-style-type: none;
+    width: 100%;
+    padding: 40px 13%;
+    height: 20rem;
+}
+
+.scroll li div p {
+    line-height: 1.8rem;
+    text-indent: 0.8rem;
+    font-size: 0.9rem;
+    background: #F0F0F0;
+}
+
+.scroll li div p:first-of-type {
+    margin-top: 40%;
+    padding-top: 0.4rem;
+    border-bottom: 1px dashed #e5e5e5;
+}
+
+.scroll li div {
+    background: #fff;
+    border: 1px solid #E2E2E2;
+    width: 80%;
+    transition: all ease .4s;
+}
+
+.scroll li img {
+    display: block;
+    margin: 20px auto;
+}
+
+.left {
+    transform: scale(.7);
+    -webkit-transform: scale(.7);
+    left: -9%;
+    position: absolute;
+    z-index: 5;
+}
+
+.right {
+    transform: scale(.7);
+    -webkit-transform: scale(.7);
+    left: 29%;
+    position: absolute;
+    z-index: 5;
+}
+
+.center {
+    z-index: 10;
+    position: absolute;
+    left: 10%;
+}
+
+.middle {
+    background: #f3f3f3;
+    overflow: hidden;
+}
+
+.box {
+    width: 90%;
+    padding: 20px 6% 40px 6%;
+    border-radius: 5px;
+    margin: 1rem auto;
+    /*text-align: center;*/
+}
+
+.box img {
+    display: block;
+    margin: 10px auto;
+}
+
+.box h3 {
+    text-align: center;
+    line-height: 2.5rem;
+}
+
+.box p {
+    color: #fff;
+    margin: 10px 0;
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+}
+
+.rightp {
+    text-align: right;
+    margin-right: 1rem;
+}
+
+.dong {
+    background: #06CBD2;
+}
+
+.henu {
+    background: #0EC8F2;
+}
+
+.rabbit {
+    background: #029EE5;
+}
+
+.union h3 {
+    text-align: center;
+    line-height: 3rem;
+}
+
+.gray {
+    color: #7d7d7d;
+    line-height: 2rem;
+    text-align: center;
+}
+
+/*我们能提供的资源*/
+.func h3,
+.func p {
+    text-align: center;
+}
+
+.func h3 {
+    line-height: 4rem;
+}
+
+.func p {
+    line-height: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.func img {
+    display: block;
+    margin: 1rem auto;
+    width: 35%;
+}
+
+.func {
+    background: #fff;
+    width: 90%;
+    padding: 20px;
+    margin: 20px auto;
+}
+
+/*招募要求*/
+.hope {
+    width: 100%;
+    background: #fff;
+    padding: 20px 0;
+}
+
+.hope h3 {
+    text-align: center;
+    line-height: 6rem;
+}
+
+.require {
+    width: 90%;
+    padding: 20px 7%;
+    border: 1px solid #e2e2e2;
+    margin: 0 auto;
+    border-top: 3px solid #038BED;
+    border-radius: 2px;
+}
+
+.require p {
+    line-height: 1.4rem;
+    font-size: 0.9rem;
+}
+
+.hope a {
+    display: block;
+    text-align: center;
+    border: 1px solid #008df2;
+    width: 70%;
+    margin: 3rem auto 10px;
+    line-height: 3rem;
+    border-radius: 1.5rem;
+    text-decoration: none;
+    color: #008df2;
+    outline: none;
+}
